@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'tvinfo'
+
+grabber = TVInfo::EpisodeGrabber.new
+grabber.grab

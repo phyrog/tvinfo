@@ -14,7 +14,7 @@ module TVInfo
     end
 
     def grab
-      @config = load_config_file("/home/tom/.config/tvinfo/config.yml")
+      @config = load_config_file("#{Dir.home}/.config/tvinfo/config.yml")
       @shows = fetch_shows(@config)
 
       @shows.each do |show|

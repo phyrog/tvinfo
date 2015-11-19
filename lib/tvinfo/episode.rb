@@ -31,7 +31,7 @@ VERSION:2.0
 BEGIN:VEVENT
 UID:#{@id}
 SUMMARY:#{@show_name} S#{'%02d' % @season}E#{'%02d' % @episode}: #{@name}
-DESCRIPTION:#{@description}
+DESCRIPTION:#{@description.gsub("\n", " ")}
 DTSTART;VALUE=DATE:#{@first_aired.strftime('%Y%m%d') if @first_aired}
 DTEND;VALUE=DATE:#{@first_aired.strftime('%Y%m%d') if @first_aired}
 END:VEVENT
